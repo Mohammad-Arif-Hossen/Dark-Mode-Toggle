@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DarkMode Demo</div>
+        <div class="theme-controls">
+            <div class="theme-toggle-container">
+                <button id="theme-toggle" aria-label="Toggle dark mode" role="switch" aria-checked="false">
+                    <span class="toggle-track">
+                        <span class="toggle-icon toggle-icon-light">
+                            <i class="fas fa-sun"></i>
+                        </span>
+                        <span class="toggle-icon toggle-icon-dark">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </span>
+                </button>
+            </div>
+            <div class="theme-selector">
+                <button id="theme-options-toggle" aria-label="More theme options">
+                    <i class="fas fa-palette"></i>
+                </button>
+                <div class="theme-options" id="theme-options-panel">
+                    <div class="theme-option-group">
+                        <h3>Light Themes</h3>
+                        <button class="theme-option" data-theme="light-default">Default</button>
+                        <button class="theme-option" data-theme="light-sepia">Sepia</button>
+                        <button class="theme-option" data-theme="light-cool">Cool</button>
+                    </div>
+                    <div class="theme-option-group">
+                        <h3>Dark Themes</h3>
+                        <button class="theme-option" data-theme="dark-default">Default</button>
+                        <button class="theme-option" data-theme="dark-oled">OLED</button>
+                        <button class="theme-option" data-theme="dark-blue">Blue</button>
+                    </div>
+                    <div class="accent-option-group">
+                        <h3>Accent Color</h3>
+                        <div class="accent-options">
+                            <button class="accent-option" data-accent="blue" style="background-color: #4285f4;"></button>
+                            <button class="accent-option" data-accent="green" style="background-color: #34a853;"></button>
+                            <button class="accent-option" data-accent="yellow" style="background-color: #fbbc05;"></button>
+                            <button class="accent-option" data-accent="red" style="background-color: #ea4335;"></button>
+                            <button class="accent-option" data-accent="purple" style="background-color: #9c27b0;"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Dark Mode Toggle Demo</h1>
+            <p>A professional and creative approach to theme switching</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-moon feature-icon"></i>
+                <h2>System Preference Detection</h2>
+                <p>Automatically detects and applies your system's preferred theme setting.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-palette feature-icon"></i>
+                <h2>Customizable Themes</h2>
+                <p>Choose from multiple light and dark themes to suit your preference.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-universal-access feature-icon"></i>
+                <h2>Accessibility Focused</h2>
+                <p>Designed with WCAG guidelines in mind for optimal readability and usability.</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>About Dark Mode</h2>
+            <p>Dark mode reduces eye strain in low-light conditions and can save battery life on OLED displays. It's also a popular aesthetic choice for many users.</p>
+            <p>This implementation includes smooth transitions, system preference detection, and customizable themes to provide the best user experience.</p>
+            
+            <div class="demo-text">
+                <h3>Typography Demo</h3>
+                <p>This paragraph demonstrates how text appears in the current theme. Good contrast is essential for readability.</p>
+                <blockquote>This is a blockquote to show how different text elements appear in each theme.</blockquote>
+                <pre><code>// This is a code block
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created as a demonstration of professional dark mode implementation</p>
+    </footer>
+
+    <div id="theme-notification" class="theme-notification" aria-live="polite">
+        <span id="notification-message">Theme changed</span>
+        <button id="notification-undo">Undo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
